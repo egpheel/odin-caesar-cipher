@@ -1,5 +1,15 @@
 # Caesar Cipher by Eduardo Gil - An assignment for The Odin Project
 
+def ask_for_text_and_shift
+  puts 'Please type the word/sentence you wish the encrypt:'
+  text = gets.chomp
+
+  puts 'Please type the shift amount:'
+  shift = gets.chomp.to_i
+
+  caesar_cipher(text, shift)
+end
+
 def caesar_cipher(text = '', shift = 0)
   alphabet = %w[a b c d e f g h i j k l m n o p q r s t u v w x y z]
   split_text = text.chars
@@ -32,4 +42,5 @@ def wrap_around_number(number = 0, min = 0, max = 26)
   output
 end
 
-caesar_cipher('What a string!', 5)
+# caesar_cipher('What a string!', 5)
+ask_for_text_and_shift
